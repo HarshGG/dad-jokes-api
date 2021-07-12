@@ -11,17 +11,17 @@ Run the file "dadjokes.py", this runs the flaskapp in your localhost<br>
 Next, run the localhost in your browser using "http://localhost:3001/". Further instructions for routes are below.
 
 ### Routes
-You're API application needs to serve the following routes.
+This API application serves the following routes.
 
-All routes should return an `application/json` content type and appropriate HTTP status code. 
+All routes return an `application/json` content type and appropriate HTTP status code. 
 
 #### Home
 `/`
-Must return JSON `{'success': True, 'message': 'This is the home page'}` with a `application/json` content type and a 200 status header.
+Returns JSON `{'success': True, 'message': 'This is the home page'}` with a `application/json` content type and a 200 status header.
 
 #### Random Joke
 `/random`
-Should pull a random joke out of `dadjokes.json` and send it back to the browser. 
+Pulls a random joke out of `dadjokes.json` and send it back to the browser. 
 
 An example request may return the following JSON string.
 
@@ -33,7 +33,7 @@ An example request may return the following JSON string.
 }
 ```
 
-Subsequent runs should return different jokes, although the tester does account for the fact that random isn't always random. 
+Subsequent runs return different jokes, although the tester does account for the fact that random isn't always random. 
 
 
 #### Specific Joke
@@ -41,7 +41,7 @@ Subsequent runs should return different jokes, although the tester does account 
 
 This route allows you to request a specific joke from the data file by passing an `id` parameter. For example, if you want to get joke #123 the request would be `/joke?id=123`. 
 
-`/joke?id=c9aaad4d` should return the following JSON string.
+`/joke?id=c9aaad4d` returns the following JSON string.
 
 ```json
 {
@@ -50,10 +50,9 @@ This route allows you to request a specific joke from the data file by passing a
     "joke": "Why shouldn't you play cards in the jungle? Too many cheetahs."
 }
 ```
+Server also checks that the id parameter is there. If it is not, the server returns a 404 status header.
 
-You will need to check that the id parameter is there. If it is not, your server should return a 404 status header.
-
-If the requested joke id is not in the data you should also send a 404 status header. 
+If the requested joke id is not in the data, the server sends a 404 status header. 
 
 ### More info about status codes
 [HTTP Status Cats](https://http.cat/)
