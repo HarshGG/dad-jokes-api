@@ -1,6 +1,10 @@
 ## Dad Jokes API Server
+Description: create an API server that returns Dad Jokes as JSON<br>
+Language: Python<br>
+Project type: School project, solo<br>
+Purpose: Learn how to create an API web application using Python's flask modules<br>
 
-For this project you're going to create an API server that returns Dad Jokes as JSON.
+## important instructions:
 
 ### Routes
 You're API application needs to serve the following routes.
