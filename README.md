@@ -6,6 +6,10 @@ Purpose: Learn how to create an API web application using Python's flask modules
 
 ## important instructions:
 
+### How to run: 
+Run the file "dadjokes.py", this runs the flaskapp in your localhost<br>
+Next, run the localhost in your browser using "http://localhost:3001/". Further instructions for routes are below.
+
 ### Routes
 You're API application needs to serve the following routes.
 
